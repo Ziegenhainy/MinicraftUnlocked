@@ -140,7 +140,9 @@ class TileMapViewer extends JPanel {
         TileMapViewer viewer = new TileMapViewer(scanner);
 
         JFrame frame = new JFrame("Tile Map Viewer - Level " + scanner.getLevel());
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
 
         JScrollPane scrollPane = new JScrollPane(viewer);
         scrollPane.getVerticalScrollBar().setUnitIncrement(32);
